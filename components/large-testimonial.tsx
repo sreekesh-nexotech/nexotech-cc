@@ -6,7 +6,7 @@ export default function LargeTestimonial() {
     <section>
       <div className="mx-auto max-w-2xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
-          <div className="space-y-3 text-center">
+          {/* <div className="space-y-3 text-center">
             <div className="relative inline-flex">
               <svg
                 className="absolute -left-6 -top-2 -z-10"
@@ -42,7 +42,7 @@ export default function LargeTestimonial() {
                 CTO at Microsoft
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

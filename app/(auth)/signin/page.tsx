@@ -26,7 +26,7 @@ export default function SignIn() {
                 id="email"
                 className="form-input w-full py-2"
                 type="email"
-                placeholder="corybarker@email.com"
+                placeholder="name@email.com"
                 required
               />
             </div>

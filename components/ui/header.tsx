@@ -23,10 +23,10 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/signup"
+                href="/form"
                 className="btn-sm bg-gray-800 text-gray-200 shadow hover:bg-gray-900"
               >
-                Register
+                Book Consultation
               </Link>
             </li>
           </ul>

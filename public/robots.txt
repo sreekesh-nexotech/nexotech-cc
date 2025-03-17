@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nexotech.cc
+
+# Sitemaps
+Sitemap: https://nexotech.cc/sitemap.xml
