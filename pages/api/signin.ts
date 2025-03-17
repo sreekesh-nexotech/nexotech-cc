@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log("Received request body:", { email, password });
 
       // Validate credentials (replace with your actual logic)
-      if (email === "test@example.com" && password === "test123") {
+      if (email === "office@nexotech.cc" && password === "hJp2IRxo6^5RxE") {
         console.log("Login successful");
 
         // Generate a simple token

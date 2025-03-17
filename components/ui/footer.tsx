@@ -20,11 +20,11 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <div className="text-sm text-gray-600">
               49/190B, Tharath building, Kalappura PO, Arattuvazhy ward, Alappuzha - 688007
             </div>
-            {/* <div className="inline-block">
+            <div className="inline-block">
               <Link href="/about">
                 <span className="text-blue-600 hover:underline cursor-pointer">About Us</span>
               </Link>
-            </div> */}
+            </div>
 
           </div>
         </div>
