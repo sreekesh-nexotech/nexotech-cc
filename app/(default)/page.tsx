@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+
 export const metadata: Metadata = {
   title: "Nexotech - Leading IT Solutions",
   description: "Discover the best web development, mobile app development, custom software development  and chatbot development in kerala at Nexotech.",

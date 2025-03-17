@@ -1,5 +1,6 @@
 "use client";
 
+import { ClientPageRoot } from "next/dist/client/components/client-page";
 import { useState } from "react";
 
 export default function LeadCollection() {
@@ -12,29 +13,33 @@ export default function LeadCollection() {
     setLoading(true);
     setSuccessMessage("");
     setErrorMessage("");
-
-    const formData = new FormData(e.currentTarget);
+  
+    const form = e.currentTarget; // Store the form reference
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-
+  
     try {
       const response = await fetch("/api/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-
-      if (response.ok) {
-        setSuccessMessage("Thank you! Your details have been submitted.");
-        e.currentTarget.reset(); // Clear the form
-      } else {
-        setErrorMessage("Something went wrong. Please try again.");
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Something went wrong");
       }
+  
+      setSuccessMessage("Thank you! Your details have been submitted.");
+      form.reset(); // Use the stored reference
     } catch (error) {
-      setErrorMessage("An error occurred while submitting your details.");
+      console.error(error);
+      setErrorMessage(error instanceof Error ? error.message : "An error occurred while submitting your details.");
     } finally {
       setLoading(false);
     }
   };
+  
 
   return (
     <>
