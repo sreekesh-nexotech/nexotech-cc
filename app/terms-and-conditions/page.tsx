@@ -45,7 +45,7 @@ export default function TermsAndConditions() {
             </p>
 
             <p className="mt-8 text-gray-600">
-              If you have any questions about these terms, please contact us at <a href="mailto:info@nexotech.com" className="text-blue-600 hover:underline">info@nexotech.com</a>.
+              If you have any questions about these terms, please contact us at <a href="mailto:office@nexotech.cc" className="text-blue-600 hover:underline">office@nexotech.cc</a>.
             </p>
           </div>
         </div>

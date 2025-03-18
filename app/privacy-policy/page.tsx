@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-8">6. Your Rights</h2>
                         <p className="mt-2 text-gray-600">
-                            You have the right to access, update, or delete your personal information. To exercise these rights, please contact us at <a href="mailto:info@nexotech.com" className="text-blue-600 hover:underline">info@nexotech.com</a>.
+                            You have the right to access, update, or delete your personal information. To exercise these rights, please contact us at <a href="mailto:office@nexotech.cc" className="text-blue-600 hover:underline">office@nexotech.cc</a>.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-8">7. Changes to This Policy</h2>
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
                         </p>
 
                         <p className="mt-8 text-gray-600">
-                            If you have any questions about our privacy practices, please contact us at <a href="mailto:info@nexotech.com" className="text-blue-600 hover:underline">info@nexotech.com</a>.
+                            If you have any questions about our privacy practices, please contact us at <a href="mailto:office@nexotech.cc" className="text-blue-600 hover:underline">office@nexotech.cc</a>.
                         </p>
                     </div>
                 </div>
