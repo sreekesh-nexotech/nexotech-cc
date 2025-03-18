@@ -3,14 +3,14 @@ import Logo from "./logo";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
-    <footer className="bg-gray-50">
+    <footer>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
-          className={`grid gap-8 py-12 sm:grid-cols-12 ${border ? "border-t border-gray-200" : ""}`}
+          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
         >
           {/* 1st block */}
-          <div className="space-y-4 sm:col-span-12 lg:col-span-6">
+          <div className="space-y-2 sm:col-span-12 lg:col-span-6">
             <div>
               <Logo />
             </div>
@@ -19,6 +19,24 @@ export default function Footer({ border = false }: { border?: boolean }) {
             </div>
             <div className="text-sm text-gray-600">
               49/190B, Tharath building, Kalappura PO, Arattuvazhy ward, Alappuzha - 688007
+            </div>
+            <div className="text-sm text-gray-600">
+              For sales-related inquiries:{" "}
+              <a
+                href="mailto:sales@nexotech.cc"
+                className="text-blue-600 hover:underline"
+              >
+                sales@nexotech.cc
+              </a>
+            </div>
+            <div className="text-sm text-gray-600">
+              For recruitment-related inquiries:{" "}
+              <a
+                href="mailto:hr@nexotech.cc"
+                className="text-blue-600 hover:underline"
+              >
+                hr@nexotech.cc
+              </a>
             </div>
           </div>
 
