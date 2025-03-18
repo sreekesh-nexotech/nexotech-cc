@@ -18,6 +18,7 @@ const createTableQuery = `
     phone VARCHAR(20),
     email VARCHAR(255) NOT NULL,
     company VARCHAR(255),
+    message TEXT, -- Added message column
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   );
 `;
@@ -29,7 +30,7 @@ pool.query(createTableQuery)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
-    const { name, phone, email, company } = req.body;
+    const { name, phone, email, company, message } = req.body;
 
     // Validate required fields
     if (!name || !email) {
@@ -39,11 +40,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       // Insert the new lead into the database
       const insertQuery = `
-        INSERT INTO leads (name, phone, email, company)
-        VALUES ($1, $2, $3, $4)
+        INSERT INTO leads (name, phone, email, company, message)
+        VALUES ($1, $2, $3, $4, $5)
         RETURNING *;
       `;
-      const values = [name, phone, email, company];
+      const values = [name, phone, email, company, message];
 
       const result = await pool.query(insertQuery, values);
 

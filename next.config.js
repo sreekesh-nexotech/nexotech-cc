@@ -16,3 +16,10 @@ module.exports = {
     ];
   },
 };
+
+module.exports = {
+  webpack: (config) => {
+    config.plugins = config.plugins.filter((plugin) => plugin.constructor.name !== "HotModuleReplacementPlugin");
+    return config;
+  },
+};

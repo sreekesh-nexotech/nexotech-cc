@@ -1,6 +1,5 @@
 "use client";
 
-import { ClientPageRoot } from "next/dist/client/components/client-page";
 import { useState } from "react";
 
 export default function LeadCollection() {
@@ -13,23 +12,23 @@ export default function LeadCollection() {
     setLoading(true);
     setSuccessMessage("");
     setErrorMessage("");
-  
+
     const form = e.currentTarget; // Store the form reference
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-  
+
     try {
       const response = await fetch("/api/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-  
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || "Something went wrong");
       }
-  
+
       setSuccessMessage("Thank you! Your details have been submitted.");
       form.reset(); // Use the stored reference
     } catch (error) {
@@ -39,7 +38,6 @@ export default function LeadCollection() {
       setLoading(false);
     }
   };
-  
 
   return (
     <>
@@ -115,6 +113,21 @@ export default function LeadCollection() {
               type="text"
               placeholder="ABC Corp"
             />
+          </div>
+          <div>
+            <label
+              className="mb-1 block text-sm font-medium text-gray-700"
+              htmlFor="message"
+            >
+              Message (Optional)
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              className="form-textarea w-full py-2"
+              rows={4}
+              placeholder="Enter your message..."
+            ></textarea>
           </div>
         </div>
         <div className="mt-6">

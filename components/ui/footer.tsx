@@ -3,14 +3,14 @@ import Logo from "./logo";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
-    <footer>
+    <footer className="bg-gray-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
-          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
+          className={`grid gap-8 py-12 sm:grid-cols-12 ${border ? "border-t border-gray-200" : ""}`}
         >
           {/* 1st block */}
-          <div className="space-y-2 sm:col-span-12 lg:col-span-4">
+          <div className="space-y-4 sm:col-span-12 lg:col-span-6">
             <div>
               <Logo />
             </div>
@@ -20,15 +20,48 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <div className="text-sm text-gray-600">
               49/190B, Tharath building, Kalappura PO, Arattuvazhy ward, Alappuzha - 688007
             </div>
-            <div className="inline-block">
-              <Link href="/about">
-                <span className="text-blue-600 hover:underline cursor-pointer">About Us</span>
-              </Link>
-            </div>
+          </div>
 
+          {/* 2nd block: Quick Links */}
+          <div className="sm:col-span-6 lg:col-span-3">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-gray-600 hover:text-blue-600 transition duration-200"
+                >
+                  About Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 3rd block: Legal Links */}
+          <div className="sm:col-span-6 lg:col-span-3">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Legal</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/terms-and-conditions"
+                  className="text-gray-600 hover:text-blue-600 transition duration-200"
+                >
+                  Terms and Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-gray-600 hover:text-blue-600 transition duration-200"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
       {/* Big text */}
       <div className="relative -mt-16 h-60 w-full" aria-hidden="true">
         <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-gradient-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['Nexotech'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['Nexotech'] after:[text-shadow:0_1px_0_white]"></div>

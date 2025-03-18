@@ -1,6 +1,8 @@
+"use client"; // Mark as a Client Component
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation"; // Use the new router
 import styles from "./Dashboard.module.css";
+import * as XLSX from "xlsx";
 
 interface Lead {
   id: number;
@@ -8,6 +10,7 @@ interface Lead {
   phone: string;
   email: string;
   company: string;
+  message: string;
   timestamp: string;
 }
 
@@ -17,9 +20,11 @@ const Dashboard = () => {
 
   // Redirect to signin if not logged in
   useEffect(() => {
-    const authToken = localStorage.getItem("auth_token");
-    if (!authToken) {
-      router.push("/signin");
+    if (typeof window !== "undefined") {
+      const authToken = localStorage.getItem("auth_token");
+      if (!authToken) {
+        router.push("/signin");
+      }
     }
   }, [router]);
 
@@ -56,11 +61,31 @@ const Dashboard = () => {
     router.push("/signin");
   };
 
+  const handleDownload = () => {
+    const data = leads.map((lead) => ({
+      ID: lead.id,
+      Name: lead.name,
+      Phone: lead.phone,
+      Email: lead.email,
+      Company: lead.company,
+      Message: lead.message,
+      Timestamp: new Date(lead.timestamp).toLocaleString(),
+    }));
+
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Leads");
+    XLSX.writeFile(workbook, "leads.xlsx");
+  };
+
   return (
     <div className={styles.dashboard}>
       <h1>Leads Dashboard</h1>
       <button className={styles.button} onClick={handleLogout}>
         Logout
+      </button>
+      <button className={styles.button} onClick={handleDownload}>
+        Download as Excel
       </button>
       <table className={styles.table}>
         <thead>
@@ -70,6 +95,7 @@ const Dashboard = () => {
             <th>Phone</th>
             <th>Email</th>
             <th>Company</th>
+            <th>Message</th>
             <th>Timestamp</th>
             <th>Actions</th>
           </tr>
@@ -82,6 +108,7 @@ const Dashboard = () => {
               <td>{lead.phone}</td>
               <td>{lead.email}</td>
               <td>{lead.company}</td>
+              <td>{lead.message}</td>
               <td>{new Date(lead.timestamp).toLocaleString()}</td>
               <td>
                 <button className={styles.button} onClick={() => handleDelete(lead.id)}>
