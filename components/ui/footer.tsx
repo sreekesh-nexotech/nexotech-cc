@@ -59,6 +59,14 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   About Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/contact-us"
+                  className="text-gray-600 hover:text-blue-600 transition duration-200"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
