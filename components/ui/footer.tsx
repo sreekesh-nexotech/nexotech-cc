@@ -7,7 +7,11 @@ export default function Footer({ border = false }: { border?: boolean }) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
-          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
+          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${
+            border
+              ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]"
+              : ""
+          }`}
         >
           {/* 1st block */}
           <div className="space-y-2 sm:col-span-12 lg:col-span-6">
@@ -18,7 +22,8 @@ export default function Footer({ border = false }: { border?: boolean }) {
               &copy; Nexotech.cc - All rights reserved.
             </div>
             <div className="text-sm text-gray-600">
-              49/190B, Tharath building, Kalappura PO, Arattuvazhy ward, Alappuzha - 688007
+              49/190B, Tharath building, Kalappura PO, Arattuvazhy ward,
+              Alappuzha - 688007
             </div>
             <div className="text-sm text-gray-600">
               For sales-related inquiries:{" "}
@@ -42,7 +47,9 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 2nd block: Quick Links */}
           <div className="sm:col-span-6 lg:col-span-3">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -58,7 +65,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
           {/* 3rd block: Legal Links */}
           <div className="sm:col-span-6 lg:col-span-3">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Legal</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li>
                 <Link
                   href="/terms-and-conditions"
@@ -73,6 +80,22 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 hover:text-blue-600 transition duration-200"
                 >
                   Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/refund-and-cancellation"
+                  className="text-gray-600 hover:text-blue-600 transition duration-200"
+                >
+                  Refund and Cancellation Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/shipping-and-delivery"
+                  className="text-gray-600 hover:text-blue-600 transition duration-200"
+                >
+                  Shipping and Delivery Policy
                 </Link>
               </li>
             </ul>
