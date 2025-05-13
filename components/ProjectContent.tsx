@@ -53,15 +53,15 @@ export default function ProjectContent({
             <p className="text-gray-600">{description}</p>
             <a href={website} className="text-sm text-gray-500 underline" target='new'>Visit Website</a>
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
-              <div className=" p-4 py-0 text-left border-r-2 ">
+              <div className=" p-2 py-0 text-left border-r-2 ">
                 <p className="text-xs text-gray-500 md:text-sm">Project Cost</p>
                 <p className="font-medium text-base md:text-xl ">{cost}</p>
               </div>
-              <div className="p-4 py-0 text-left border-r-2 ">
+              <div className="p-2 py-0 text-left border-r-2 ">
                 <p className="text-xs text-gray-500 md:text-sm">Duration</p>
                 <p className="font-medium text-base md:text-xl">{duration}</p>
               </div>
-              <div className="p-4 py-0 text-left">
+              <div className="p-2 py-0 text-left">
                 <p className="text-xs text-gray-500 md:text-sm">Technology</p>
                 <p className="font-medium text-base md:text-xl">{technology}</p>
               </div>
