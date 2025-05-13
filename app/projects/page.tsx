@@ -105,7 +105,7 @@ export default function Projects() {
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
                 >
-                  <a
+                  <Link
                     className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="#project-section"
                   >
@@ -115,13 +115,13 @@ export default function Projects() {
                         -&gt;
                       </span>
                     </span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
                     href="/form"
                   >
                     Start Your Project Today
-                  </a>
+                  </Link>
                   
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function Projects() {
 
     <ProjectContent
         title="Autogen Bots – Robotics & AI Website"
-        description="Showcasing cutting-edge AI, robotics, and computer vision innovation, this website highlights Autogen’s autonomous electric vehicles for agriculture, warehousing, and beyond — designed for business acceleration through automation." website="https://nexotech.cc/"
+        description="Showcasing cutting-edge AI, robotics, and computer vision innovation, this website highlights Autogen’s autonomous electric vehicles for agriculture, warehousing, and beyond — designed for business acceleration through automation." website="https://www.autogenbots.com/"
         images={[
           '/images/projectImg.png',
           '/images/projectImg (1).png',
@@ -154,7 +154,7 @@ export default function Projects() {
 
       <ProjectContent
         title="Birapt – Influencer Marketing Platform"
-        description="A clean, fast-loading website built to present Birapt’s AI-driven influencer marketing engine. Built to support brand-influencer trust and campaign efficiency with real-time collaboration tools." website="https://nexotech.cc/"
+        description="A clean, fast-loading website built to present Birapt’s AI-driven influencer marketing engine. Built to support brand-influencer trust and campaign efficiency with real-time collaboration tools." website="https://birapt.com/home"
         images={[
           '/images/projectImg (1).png',
           '/images/projectImg (3).png',
