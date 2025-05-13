@@ -99,12 +99,12 @@ export default function HeroHome() {
                       </span>
                     </span>
                   </a>
-                  <a
+                  <Link
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#services-offered"
+                    href="/projects"
                   >
-                    Learn More
-                  </a>
+                    Our Projects
+                  </Link>
                 </div>
               </div>
             </div>
