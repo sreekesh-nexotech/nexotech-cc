@@ -116,12 +116,12 @@ export default function Projects() {
                       </span>
                     </span>
                   </a>
-                  <a
-                    className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="/form"
-                  >
-                    Start Your Project Today
-                  </a>
+                  <Link
+                      href="/form"
+                      className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
+                    >
+                      Start Your Project Today
+                    </Link>
                   
                 </div>
               </div>
