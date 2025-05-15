@@ -101,11 +101,12 @@ export default function HeroHome() {
                     </span>
                   </Link>
                   <Link
-                    className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
+                    className="btn bg-white text-gray-800 shadow hover:bg-gray-50 w-full sm:w-auto sm:ml-4 z-10 relative"
                     href="/projects"
                   >
                     Our Projects
                   </Link>
+
                 </div>
               </div>
             </div>

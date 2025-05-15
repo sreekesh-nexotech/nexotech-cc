@@ -1,13 +1,7 @@
 "use client";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import PageIllustration from "@/components/page-illustration";
-import Avatar01 from "@/public/images/avatar-01.jpg";
-import Avatar02 from "@/public/images/avatar-02.jpg";
-import Avatar03 from "@/public/images/avatar-03.jpg";
-import Avatar04 from "@/public/images/avatar-04.jpg";
-import Avatar05 from "@/public/images/avatar-05.jpg";
-import Avatar06 from "@/public/images/avatar-06.jpg";
+import PageIllustration from "@/components/page-illustration";  
 import Link from "next/link";
 import Image from "next/image";
 import Cta from "@/components/cta";
@@ -35,57 +29,9 @@ export default function Projects() {
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
-            <div
-              className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"
-              data-aos="zoom-y-out"
-            >
-              <div className="-mx-0.5 flex justify-center -space-x-3">
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar01}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar02}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar03}
-                  width={32}
-                  height={32}
-                  alt="Avatar 02"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar04}
-                  width={32}
-                  height={32}
-                  alt="Avatar 03"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar05}
-                  width={32}
-                  height={32}
-                  alt="Avatar 04"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar06}
-                  width={32}
-                  height={32}
-                  alt="Avatar 05"
-                />
-              </div>
-            </div>
+   
             <h1
-              className="mb-6 border-y text-4xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
+              className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
@@ -93,7 +39,7 @@ export default function Projects() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-base text-gray-700 md:text-lg"
+                className="mb-8 text-sm text-gray-700 md:text-lg"
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
@@ -118,7 +64,7 @@ export default function Projects() {
                   </a>
                   <Link
                       href="/form"
-                      className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
+                      className="btn bg-white text-gray-800 shadow hover:bg-gray-50 w-full sm:w-auto sm:ml-4 z-10 relative"
                     >
                       Start Your Project Today
                     </Link>
@@ -143,9 +89,10 @@ export default function Projects() {
         title="Autogen Bots – Robotics & AI Website"
         description="Showcasing cutting-edge AI, robotics, and computer vision innovation, this website highlights Autogen’s autonomous electric vehicles for agriculture, warehousing, and beyond — designed for business acceleration through automation." website="https://www.autogenbots.com/"
         images={[
-          '/images/projectImg.png',
-          '/images/projectImg (1).png',
-          '/images/projectImg (2).png',
+          '/images/autoGenMock (4).png',
+          '/images/autoGenMock (2).png',
+          '/images/autoGenMock (3).png',
+          '/images/autoGenMock (1).png',
         ]}
         cost="₹10k"
         duration="7 Days"
@@ -156,9 +103,10 @@ export default function Projects() {
         title="Birapt – Influencer Marketing Platform"
         description="A clean, fast-loading website built to present Birapt’s AI-driven influencer marketing engine. Built to support brand-influencer trust and campaign efficiency with real-time collaboration tools." website="https://birapt.com/home"
         images={[
-          '/images/projectImg (1).png',
-          '/images/projectImg (3).png',
-          '/images/projectImg.png',
+          '/images/biraptMockup (1).png',
+          '/images/biraptMockup (2).png',
+          '/images/biraptMockup (3).png',
+          '/images/biraptMockup (4).png',
         ]}
         cost="₹10k"
         duration="5 Days"
@@ -167,11 +115,12 @@ export default function Projects() {
 
       <ProjectContent
         title="Golden Ray – Solar EPC Solutions"
-        description="A premium website in progress for one of Kerala’s emerging solar EPC leaders. Built to reflect trust, quality, and customer-first values — while powering solar project conversions." website="https://nexotech.cc/"
+        description="A premium website in progress for one of Kerala’s emerging solar EPC leaders. Built to reflect trust, quality, and customer-first values — while powering solar project conversions." website=""
         images={[
-          '/images/projectImg (2).png',
-          '/images/projectImg (1).png',
-          '/images/projectImg (3).png',
+          '/images/goldenRayMock (2).png',
+          '/images/goldenRayMock (1).png',
+          '/images/goldenRayMock (3).png',
+          '/images/goldenRayMock (4).png',
         ]}
         cost="₹80k"
         duration="in-progress"
@@ -180,7 +129,7 @@ export default function Projects() {
 
       <ProjectContent
         title="NexoGMS – Smart gym management solution"
-        description="A modern, cloud-based platform that streamlines member tracking, payments, communication, and daily gym operations — built to scale with fitness centers of any size." website="https://nexotech.cc/"
+        description="A modern, cloud-based platform that streamlines member tracking, payments, communication, and daily gym operations — built to scale with fitness centers of any size." website=""
         images={[
           '/images/projectImg (3).png',
           '/images/projectImg.png',
@@ -193,7 +142,7 @@ export default function Projects() {
 
       <ProjectContent
         title="NexoGMS – Mobile application"
-        description="A dedicated fitness companion app for gym members — track workouts, vitals, fees, and goals. Supports calorie tracking, branded apps, and AI-powered insights." website="https://nexotech.cc/"
+        description="A dedicated fitness companion app for gym members — track workouts, vitals, fees, and goals. Supports calorie tracking, branded apps, and AI-powered insights." website=""
         images={[
           '/images/projectImg (3).png',
           '/images/projectImg.png',
