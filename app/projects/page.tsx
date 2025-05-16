@@ -131,9 +131,10 @@ export default function Projects() {
         title="NexoGMS – Smart gym management solution"
         description="A modern, cloud-based platform that streamlines member tracking, payments, communication, and daily gym operations — built to scale with fitness centers of any size." website=""
         images={[
-          '/images/projectImg (3).png',
-          '/images/projectImg.png',
-          '/images/projectImg (1).png',
+          '/images/NexoGMS_mockup_03.png',
+          '/images/NexoGMS_mockup_01.png',
+          '/images/NexoGMS_mockup_02.png',
+          '/images/NexoGMS_mockup_04.png',
         ]}
         cost="₹120k"
         duration="60 Days"
@@ -144,9 +145,10 @@ export default function Projects() {
         title="NexoGMS – Mobile application"
         description="A dedicated fitness companion app for gym members — track workouts, vitals, fees, and goals. Supports calorie tracking, branded apps, and AI-powered insights." website=""
         images={[
-          '/images/projectImg (3).png',
-          '/images/projectImg.png',
-          '/images/projectImg (1).png',
+          '/images/NexoGMS_Mobile 03.png',
+          '/images/NexoGMS_Mobile 02.png',
+          '/images/NexoGMS_Mobile 04.png',
+          '/images/NexoGMS_Mobile 01.png',
         ]}
         cost="₹60k"
         duration="60 Days"
