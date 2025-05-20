@@ -80,7 +80,8 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Let's create something amazing together - Fill out the form for a free consultation service
+                Let's create something amazing together - Fill out the form for
+                a free consultation service
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
@@ -88,7 +89,7 @@ export default function HeroHome() {
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
                 >
-                  <a
+                  <Link
                     className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="/form"
                   >
@@ -98,13 +99,14 @@ export default function HeroHome() {
                         -&gt;
                       </span>
                     </span>
-                  </a>
-                  <a
-                    className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#services-offered"
+                  </Link>
+                  <Link
+                    className="btn bg-white text-gray-800 shadow hover:bg-gray-50 w-full sm:w-auto sm:ml-4 z-10 relative"
+                    href="/projects"
                   >
-                    Learn More
-                  </a>
+                    Our Projects
+                  </Link>
+
                 </div>
               </div>
             </div>
@@ -127,7 +129,8 @@ export default function HeroHome() {
                 </span>{" "}
                 <br />
                 <span className="animate-[code-2_10s_infinite]">
-                  --Zoom Meeting for understanding the requirement that are essential for the growth of your business.
+                  --Zoom Meeting for understanding the requirement that are
+                  essential for the growth of your business.
                 </span>
                 <br />
                 <br />
@@ -136,7 +139,8 @@ export default function HeroHome() {
                 </span>{" "}
                 <br />
                 <span className="animate-[code-4_10s_infinite]">
-                  --Tailoring the development according the budget and requirment
+                  --Tailoring the development according the budget and
+                  requirment
                 </span>
                 <br />
                 <br />
@@ -145,18 +149,27 @@ export default function HeroHome() {
                 </span>
                 <br />
                 <span className="animate-[code-6_10s_infinite]">
-                  --Initial prototypes for review followed by Regular development activities
+                  --Initial prototypes for review followed by Regular
+                  development activities
                 </span>
                 <br />
                 <br />
-                <span className="animate-[code-7_10s_infinite] text-gray-200">4.Testing Phase & Deployment</span>
+                <span className="animate-[code-7_10s_infinite] text-gray-200">
+                  4.Testing Phase & Deployment
+                </span>
                 <br />
-                <span className="animate-[code-8_10s_infinite]">--Work will be delivered here to the client</span>
+                <span className="animate-[code-8_10s_infinite]">
+                  --Work will be delivered here to the client
+                </span>
                 <br />
                 <br />
-                <span className="animate-[code-9_10s_infinite] text-gray-200">5.Support</span>
+                <span className="animate-[code-9_10s_infinite] text-gray-200">
+                  5.Support
+                </span>
                 <br />
-                <span className="animate-[code-10_10s_infinite]">--Free support according to the agreed T&C of the project.</span>
+                <span className="animate-[code-10_10s_infinite]">
+                  --Free support according to the agreed T&C of the project.
+                </span>
                 <br />
               </div>
             </div>
