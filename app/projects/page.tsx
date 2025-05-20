@@ -11,6 +11,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { useEffect } from 'react';
+import ProjectContact from "@/components/project-contact";
+import Testimonial from "@/components/testimonial";
 
 
 export default function Projects() {
@@ -63,7 +65,7 @@ export default function Projects() {
                     </span>
                   </a>
                   <Link
-                      href="/form"
+                      href="#contact"
                       className="btn bg-white text-gray-800 shadow hover:bg-gray-50 w-full sm:w-auto sm:ml-4 z-10 relative"
                     >
                       Start Your Project Today
@@ -79,8 +81,20 @@ export default function Projects() {
       </div>
     </section>
 
-    {/* project contents */}
+    {/* top contact form */}
+    <section className="md:mb-40 mb-20 scroll-mt-[130px]" >
+      <ProjectContact 
+        heading="Let us build an awesome project together"
+        description="Tell us where to reach you — we’ll get in touch to discuss your idea."
+        showEmail={false}
+        showImage={false}
+        nameId="name"
+        phoneId="phone"
+      />
+    </section>
 
+
+    {/* project contents */}
 <section id="project-section" className=" text-center scroll-mt-[130px]">
         <h1 className="mb-6 border-y text-4xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-5xl">Our Works</h1>
 </section>
@@ -155,7 +169,21 @@ export default function Projects() {
         technology="Flutter"
       />
 
-    <Cta/>
+<Testimonial/>
+
+{/* bottom contact form */}
+     <section className="md:mb-40 mb-20 scroll-mt-[130px]" id="contact">
+        <ProjectContact 
+          heading="Ready to Start Something Great?"
+          description="Let’s turn your idea into reality. Drop your details and we’ll take it from here."
+          showEmail={true}
+          showImage={true}
+          nameId="bName"
+          phoneId="bPhone"
+        />
+      </section>
+
+    {/* footer */}
     <Footer />
     </>
   );
