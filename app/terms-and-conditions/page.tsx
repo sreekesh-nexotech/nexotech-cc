@@ -5,7 +5,10 @@ import Footer from "@/components/ui/footer";
 export default function TermsAndConditions() {
   return (
     <>
-      <Header />
+      <Header
+        isLogin={true}
+        bookLink="/form"
+      />
       <div className="bg-gradient-to-b from-blue-50 to-white py-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="prose max-w-4xl mx-auto mt-16">

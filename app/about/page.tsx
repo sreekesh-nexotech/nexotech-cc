@@ -6,7 +6,10 @@ import Footer from "@/components/ui/footer";
 export default function AboutUs() {
   return (
     <>
-      <Header />
+      <Header
+        isLogin={true}
+        bookLink="/form"
+      />
       <div className="bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
         <div className="text-center py-20">

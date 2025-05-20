@@ -46,7 +46,10 @@ export default function ContactUs() {
 
   return (
     <>
-      <Header />
+      <Header
+        isLogin={true}
+        bookLink="/form"
+      />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-24 pb-12">
         {/* Form Heading - positioned right below header */}

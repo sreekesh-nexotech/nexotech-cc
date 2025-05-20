@@ -24,7 +24,10 @@ export default function DefaultLayout({
 
   return (
     <>
-      <Header />
+      <Header
+          isLogin={true}
+          bookLink="/form"
+      />
 
       <main className="grow">{children}</main>
 
