@@ -24,8 +24,8 @@ export default function Projects() {
   return (
     <>
     <Header
-      isLogin={false}
-      bookLink="#contact"
+      isLogin={true}
+      bookLink="/form"
     />
     <section className="relative">
       <PageIllustration />
@@ -40,7 +40,7 @@ export default function Projects() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              Building Digital Success Stories One Project at a Time
+              Our Works
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -58,7 +58,7 @@ export default function Projects() {
                 >
                   <Link
                     className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                    href="#contact"
+                    href="/contact-us"
                   >
                     <span className="relative inline-flex items-center">
                       Start Your Project Today{" "}
@@ -84,24 +84,10 @@ export default function Projects() {
       </div>
     </section>
 
-    {/* top contact form */}
-    <section className="md:mb-40 mb-20 scroll-mt-[130px]" >
-      <ProjectContact 
-        heading="Let us build an awesome project together"
-        description="Tell us where to reach you — we’ll get in touch to discuss your idea."
-        showEmail={false}
-        showImage={false}
-        nameId="name"
-        phoneId="phone"
-      />
-    </section>
+   
 
 
-    {/* project contents */}
-<section id="project-section" className=" text-center scroll-mt-[130px]">
-        <h1 className="mb-6 border-y text-4xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-5xl">Our Works</h1>
-</section>
-
+<section id="project-section" className="scroll-mt-[100px]">
     <ProjectContent
         title="Autogen Bots – Robotics & AI Website"
         description="Showcasing cutting-edge AI, robotics, and computer vision innovation, this website highlights Autogen’s autonomous electric vehicles for agriculture, warehousing, and beyond — designed for business acceleration through automation." website="https://www.autogenbots.com/"
@@ -171,22 +157,8 @@ export default function Projects() {
         duration="60 Days"
         technology="Flutter"
       />
+</section>
 
-<Testimonial/>
-
-{/* bottom contact form */}
-     <section className="md:mb-40 mb-20 scroll-mt-[130px]" id="contact">
-        <ProjectContact 
-          heading="Ready to Start Something Great?"
-          description="Let’s turn your idea into reality. Drop your details and we’ll take it from here."
-          showEmail={true}
-          showImage={true}
-          nameId="bName"
-          phoneId="bPhone"
-        />
-      </section>
-
-    {/* footer */}
     <Footer />
     </>
   );
