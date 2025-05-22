@@ -1,15 +1,33 @@
+// components/ui/logo.js
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Logo() {
+  const pathname = usePathname();
+  const isNewLandingPage = pathname === "/new-landing";
+
   return (
-    <Link href="/" className="inline-flex" aria-label="Nexotech">
-      <Image
-        src="/images/logo-blue-favicon.png" // Replace with your logo's path
-        alt="Nexotech Logo"
-        width={50} // Adjust width as needed
-        height={50} // Adjust height as neede
-      />
-    </Link>
+    <>
+      {isNewLandingPage ? (
+        <div className="inline-flex cursor-default" aria-label="Nexotech">
+          <Image
+            src="/images/logo-blue-favicon.png"
+            alt="Nexotech Logo"
+            width={50}
+            height={50}
+          />
+        </div>
+      ) : (
+        <Link href="/" className="inline-flex cursor-pointer" aria-label="Nexotech">
+          <Image
+            src="/images/logo-blue-favicon.png"
+            alt="Nexotech Logo"
+            width={50}
+            height={50}
+          />
+        </Link>
+      )}
+    </>
   );
 }
