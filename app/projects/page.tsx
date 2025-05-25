@@ -127,7 +127,7 @@ export default function Projects() {
         ]}
         cost="₹80k"
         duration="in-progress"
-        technology="React JS, Django, Next JS"
+        technology="ReactJS, Django, NextJS"
       />
 
       <ProjectContent
@@ -141,7 +141,7 @@ export default function Projects() {
         ]}
         cost="₹120k"
         duration="60 Days"
-        technology="React JS, Django, Postgre SQL"
+        technology="ReactJS, Django, Postgre SQL"
       />
 
       <ProjectContent
