@@ -168,7 +168,7 @@ export default function ContactForm({
                   placeholder="+91 1234-567890"
                   className="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400"
                   required
-                  pattern="[\+0-9\s\-]*"
+                  pattern="[0-9]{*}"
                   title="Please enter a valid phone number"
                 />
               </div>
