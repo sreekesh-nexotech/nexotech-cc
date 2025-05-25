@@ -28,7 +28,7 @@ export default function Projects() {
       bookLink="/form"
     />
     <section className="relative">
-      <PageIllustration />
+      <PageIllustration isCircle={false} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
@@ -127,7 +127,7 @@ export default function Projects() {
         ]}
         cost="₹80k"
         duration="in-progress"
-        technology="React JS, Django, Next JS"
+        technology="ReactJS, Django, NextJS"
       />
 
       <ProjectContent
@@ -141,7 +141,7 @@ export default function Projects() {
         ]}
         cost="₹120k"
         duration="60 Days"
-        technology="React JS, Django, Postgre SQL"
+        technology="ReactJS, Django, Postgre SQL"
       />
 
       <ProjectContent
@@ -158,6 +158,9 @@ export default function Projects() {
         technology="Flutter"
       />
 </section>
+
+    
+    <Cta/>
 
     <Footer />
     </>

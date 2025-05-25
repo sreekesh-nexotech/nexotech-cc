@@ -28,7 +28,7 @@ export default function NewLandingPage() {
       bookLink="#contact"
     />
     <section className="relative">
-      <PageIllustration />
+      <PageIllustration isCircle={true} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
