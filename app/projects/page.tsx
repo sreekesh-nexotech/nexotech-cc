@@ -92,10 +92,10 @@ export default function Projects() {
         title="Autogen Bots – Robotics & AI Website"
         description="Showcasing cutting-edge AI, robotics, and computer vision innovation, this website highlights Autogen’s autonomous electric vehicles for agriculture, warehousing, and beyond — designed for business acceleration through automation." website="https://www.autogenbots.com/"
         images={[
-          '/images/autoGenMock (4).png',
-          '/images/autoGenMock (2).png',
-          '/images/autoGenMock (3).png',
-          '/images/autoGenMock (1).png',
+          '/images/autogenMock (4).png',
+          '/images/autogenMock (2).png',
+          '/images/autogenMock (3).png',
+          '/images/autogenMock (1).png',
         ]}
         cost="₹10k"
         duration="7 Days"
