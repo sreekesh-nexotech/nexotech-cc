@@ -92,10 +92,10 @@ export default function Projects() {
         title="Autogen Bots – Robotics & AI Website"
         description="Showcasing cutting-edge AI, robotics, and computer vision innovation, this website highlights Autogen’s autonomous electric vehicles for agriculture, warehousing, and beyond — designed for business acceleration through automation." website="https://www.autogenbots.com/"
         images={[
-          '/images/autogenMock (4).png',
-          '/images/autogenMock (2).png',
-          '/images/autogenMock (3).png',
-          '/images/autogenMock (1).png',
+          '/images/autogenMock-(4).png',
+          '/images/autogenMock-(2).png',
+          '/images/autogenMock-(3).png',
+          '/images/autogenMock-(1).png',
         ]}
         cost="₹10k"
         duration="7 Days"
@@ -106,10 +106,10 @@ export default function Projects() {
         title="Birapt – Influencer Marketing Platform"
         description="A clean, fast-loading website built to present Birapt’s AI-driven influencer marketing engine. Built to support brand-influencer trust and campaign efficiency with real-time collaboration tools." website="https://birapt.com/home"
         images={[
-          '/images/biraptMockup (1).png',
-          '/images/biraptMockup (2).png',
-          '/images/biraptMockup (3).png',
-          '/images/biraptMockup (4).png',
+          '/images/biraptMockup-(1).png',
+          '/images/biraptMockup-(2).png',
+          '/images/biraptMockup-(3).png',
+          '/images/biraptMockup-(4).png',
         ]}
         cost="₹10k"
         duration="5 Days"
@@ -120,10 +120,10 @@ export default function Projects() {
         title="Golden Ray – Solar EPC Solutions"
         description="A premium website in progress for one of Kerala’s emerging solar EPC leaders. Built to reflect trust, quality, and customer-first values — while powering solar project conversions." website=""
         images={[
-          '/images/goldenRayMock (2).png',
-          '/images/goldenRayMock (1).png',
-          '/images/goldenRayMock (3).png',
-          '/images/goldenRayMock (4).png',
+          '/images/goldenRayMock-(2).png',
+          '/images/goldenRayMock-(1).png',
+          '/images/goldenRayMock-(3).png',
+          '/images/goldenRayMock-(4).png',
         ]}
         cost="₹80k"
         duration="in-progress"
@@ -148,10 +148,10 @@ export default function Projects() {
         title="NexoGMS – Mobile application"
         description="A dedicated fitness companion app for gym members — track workouts, vitals, fees, and goals. Supports calorie tracking, branded apps, and AI-powered insights." website=""
         images={[
-          '/images/NexoGMS_Mobile 03.png',
-          '/images/NexoGMS_Mobile 02.png',
-          '/images/NexoGMS_Mobile 04.png',
-          '/images/NexoGMS_Mobile 01.png',
+          '/images/NexoGMS_Mobile-03.png',
+          '/images/NexoGMS_Mobile-02.png',
+          '/images/NexoGMS_Mobile-04.png',
+          '/images/NexoGMS_Mobile-01.png',
         ]}
         cost="₹60k"
         duration="60 Days"
