@@ -48,7 +48,7 @@ export default function Projects() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                From concept to execution, Nexotech Solutions turns bold ideas into powerful, scalable digital products. Explore the innovative projects we've delivered — driving growth, solving real business challenges, and redefining digital success for our clients.
+                From concept to execution, Nexotech sturns bold ideas into powerful, scalable digital products.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
@@ -88,6 +88,22 @@ export default function Projects() {
 
 
 <section id="project-section" className="scroll-mt-[100px]">
+
+      <ProjectContent
+        title="Golden Ray – Solar EPC Solutions"
+        description="A premium website in progress for one of Kerala’s emerging solar EPC leaders. Built to reflect trust, quality, and customer-first values — while powering solar project conversions." 
+        images={[
+          '/images/goldenRayMock-(2).png',
+          '/images/goldenRayMock-(1).png',
+          '/images/goldenRayMock-(3).png',
+          '/images/goldenRayMock-(4).png',
+        ]}
+        cost="₹80k"
+        duration="in-progress"
+        technology="ReactJS, Django, NextJS"
+        isWebsiteLink={false}
+      />
+
     <ProjectContent
         title="Autogen Bots – Robotics & AI Website"
         description="Showcasing cutting-edge AI, robotics, and computer vision innovation, this website highlights Autogen’s autonomous electric vehicles for agriculture, warehousing, and beyond — designed for business acceleration through automation." website="https://www.autogenbots.com/"
@@ -116,23 +132,11 @@ export default function Projects() {
         technology="HTML, CSS, JS, Flask"
       />
 
-      <ProjectContent
-        title="Golden Ray – Solar EPC Solutions"
-        description="A premium website in progress for one of Kerala’s emerging solar EPC leaders. Built to reflect trust, quality, and customer-first values — while powering solar project conversions." website=""
-        images={[
-          '/images/goldenRayMock-(2).png',
-          '/images/goldenRayMock-(1).png',
-          '/images/goldenRayMock-(3).png',
-          '/images/goldenRayMock-(4).png',
-        ]}
-        cost="₹80k"
-        duration="in-progress"
-        technology="ReactJS, Django, NextJS"
-      />
+      
 
       <ProjectContent
         title="NexoGMS – Smart gym management solution"
-        description="A modern, cloud-based platform that streamlines member tracking, payments, communication, and daily gym operations — built to scale with fitness centers of any size." website=""
+        description="A modern, cloud-based platform that streamlines member tracking, payments, communication, and daily gym operations — built to scale with fitness centers of any size." website="https://nexogms.com/"
         images={[
           '/images/NexoGMS_mockup_03.png',
           '/images/NexoGMS_mockup_01.png',
@@ -146,7 +150,7 @@ export default function Projects() {
 
       <ProjectContent
         title="NexoGMS – Mobile application"
-        description="A dedicated fitness companion app for gym members — track workouts, vitals, fees, and goals. Supports calorie tracking, branded apps, and AI-powered insights." website=""
+        description="A dedicated fitness companion app for gym members — track workouts, vitals, fees, and goals. Supports calorie tracking, branded apps, and AI-powered insights." 
         images={[
           '/images/NexoGMS_Mobile-03.png',
           '/images/NexoGMS_Mobile-02.png',
@@ -156,6 +160,7 @@ export default function Projects() {
         cost="₹60k"
         duration="60 Days"
         technology="Flutter"
+        isWebsiteLink={false}
       />
 </section>
 

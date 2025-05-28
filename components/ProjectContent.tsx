@@ -4,11 +4,12 @@ import Image from 'next/image';
 type ProjectContentProps = {
   title: string;
   description: string;
-  website: string;
+  website?: string;
   images: string[];
   cost: string;
   duration: string;
   technology: string;
+  isWebsiteLink?: boolean;
 };
 
 
@@ -20,6 +21,7 @@ export default function ProjectContent({
   cost,
   duration,
   technology,
+  isWebsiteLink= true,
 }: ProjectContentProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -65,7 +67,7 @@ export default function ProjectContent({
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-bold mb-4 md:text-4xl">{title}</h2>
             <p className="text-gray-600">{description}</p>
-            <a href={website} className="text-sm text-gray-500 underline hover:text-blue-600  transition-all duration-300 ease-in-out" target='new'>Visit Website</a>
+            {isWebsiteLink &&(<a href={website} className="text-sm text-gray-500 underline hover:text-blue-600  transition-all duration-300 ease-in-out" target='new'>Visit Website</a>)}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
               <div className=" p-2 py-0 text-left border-r-2 ">
                 <p className="text-xs text-gray-500 md:text-sm">Project Cost</p>
