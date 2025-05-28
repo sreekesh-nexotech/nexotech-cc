@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ServicesOffered() {
     return (
       <section id="services-offered" className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
@@ -18,54 +20,57 @@ export default function ServicesOffered() {
               <article>
                 <h3 className="mb-2 text-lg font-medium text-blue-500">Websites</h3>
                 <p className="text-gray-400">
-                  We design modern, responsive websites tailored to your business.
-                  Our websites help attract more customers and establish a strong
-                  online presence.
+                  We make clean, mobile-friendly websites that work well on all devices. Our websites help your business to connect with your audience. From portfolio to Ecommerce, we will help you to build a brand.
                 </p>
               </article>
               <article>
-                <h3 className="mb-2 text-lg font-medium text-blue-500">Softwares</h3>
+                <h3 className="mb-2 text-lg font-medium text-blue-500">Custom Softwares</h3>
                 <p className="text-gray-400">
-                  We build secure, scalable, and easy-to-use custom software to
-                  fit your business needs. Simplify your processes and improve
-                  efficiency.
+                  We build custom software that is easy to use and helps your business run better. It saves time and makes your work simpler. These softwares will be easily integrated into your current website and 3rd party tools.
                 </p>
               </article>
               <article>
-                <h3 className="mb-2 text-lg font-medium text-blue-500">Applications</h3>
+                <h3 className="mb-2 text-lg font-medium text-blue-500">Mobile Applications</h3>
                 <p className="text-gray-400">
-                  We create mobile and desktop apps that are intuitive and
-                  feature-rich, improving customer engagement and accessibility.
+                  We create apps for android and apple devices. These apps are tailored for your business needs, simple to use and help your customers connect with you easily. From design to development, we take care of everything.
                 </p>
               </article>
               <article>
-                <h3 className="mb-2 text-lg font-medium text-blue-500">AI Chatbots</h3>
+                <h3 className="mb-2 text-lg font-medium text-blue-500">Whatsapp AI Chatbots</h3>
                 <p className="text-gray-400">
-                  Develop AI-powered chatbots that provide 24/7 customer support,
-                  handle multiple queries, and boost sales with instant
-                  communication.
+                  We build smart AI chatbots for WhatsApp. They talk to your customers anytime, answer questions fast, and help grow your sales by acting as a sales agent or customer service. From AI model training to Chat bot API integration we deliver quality chatbots.
                 </p>
               </article>
               <article>
                 <h3 className="mb-2 text-lg font-medium text-blue-500">
-                  WhatsApp Automation
+                  ERP, HR & Accounting Tools
                 </h3>
                 <p className="text-gray-400">
-                  Automate WhatsApp messages for greetings, responses, and
-                  notifications using APIs. Save time and enhance customer
-                  communication.
+                  We make tools to help with managing your business, employees, and money. These tools keep everything organized and make your work easier. These tools are easily integrated into your existing website to provide a business eco system.
                 </p>
               </article>
               <article>
                 <h3 className="mb-2 text-lg font-medium text-blue-500">
-                  Algo Trading Tools
+                  Algo Trading Setup
                 </h3>
                 <p className="text-gray-400">
-                  Create smart trading tools with advanced algorithms and real-time
-                  data analysis to trade smarter, reduce risks, and increase
-                  profitability.
+                  We help traders to automate their trading system using custom code. These are exclusively made for each user based on their strategy for high frequency trading. (Note: We dont sell any strategy)
                 </p>
               </article>
+              
+            </div>
+            <div className="flex items-center justify-center mt-10">
+                  <Link
+                    className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    href="/projects"
+                  >
+                    <span className="relative inline-flex items-center">
+                      See our recent works{" "}
+                      <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
+                        -&gt;
+                      </span>
+                    </span>
+                  </Link>
             </div>
           </div>
         </div>
