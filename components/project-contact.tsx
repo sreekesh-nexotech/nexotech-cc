@@ -204,7 +204,7 @@ export default function ContactForm({
 
               <button
                 type="submit"
-                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto flex justify-center items-center gap-2"
+                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto flex justify-center items-center gap-2 mt-4"
                 disabled={isLoading}
               >
                 {isLoading ? (

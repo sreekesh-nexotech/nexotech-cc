@@ -54,7 +54,7 @@ export default function ServicesOffered() {
                   Algo Trading Setup
                 </h3>
                 <p className="text-gray-400">
-                  We help traders to automate their trading system using custom code. These are exclusively made for each user based on their strategy for high frequency trading. (Note: We dont sell any strategy)
+                  We help traders to automate their trading system using custom code. These are exclusively made for each user based on their strategy for high frequency trading. (Note: We don't sell any strategy)
                 </p>
               </article>
               
