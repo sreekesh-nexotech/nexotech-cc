@@ -34,7 +34,7 @@ export default function ProjectContent({
 
   return (
     <section className="relative py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6" data-aos="fade-up">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6" data-aos="fade-up">
         <div className="flex flex-col md:flex-row items-center gap-10">
           
           {/* Image Section */}
@@ -68,18 +68,18 @@ export default function ProjectContent({
             <h2 className="text-3xl font-bold mb-4 md:text-4xl">{title}</h2>
             <p className="text-gray-600">{description}</p>
             {isWebsiteLink &&(<a href={website} className="text-sm text-gray-500 underline hover:text-blue-600  transition-all duration-300 ease-in-out" target='new'>Visit Website</a>)}
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
-              <div className=" p-2 py-0 text-left border-r-2 ">
+            <div className="flex flex-wrap justify-center md:justify-start gap-1 mt-6">
+              <div className=" px-2 py-0 text-center md:text-left border-r-2 ">
                 <p className="text-xs text-gray-500 md:text-sm">Project Cost</p>
-                <p className="font-medium text-base md:text-xl ">{cost}</p>
+                <p className="font-medium text-sm md:text-xl ">{cost}</p>
               </div>
-              <div className="p-2 py-0 text-left border-r-2 ">
+              <div className="px-2 py-0 text-center md:text-left border-r-2 ">
                 <p className="text-xs text-gray-500 md:text-sm">Duration</p>
-                <p className="font-medium text-base md:text-xl">{duration}</p>
+                <p className="font-medium text-sm md:text-xl">{duration}</p>
               </div>
-              <div className="p-2 py-0 text-left">
+              <div className="px-2 py-0 text-center md:text-left">
                 <p className="text-xs text-gray-500 md:text-sm">Technology</p>
-                <p className="font-medium text-base md:text-xl">{technology}</p>
+                <p className="font-medium text-sm md:text-xl">{technology}</p>
               </div>
             </div>
           </div>

@@ -130,12 +130,16 @@ export default function ContactForm({
           <SuccessMessage />
         ) : (
           <>
-            <div className="mb-6 md:mb-0 md:w-1/2 relative z-[1]">
+            {/* show custom heading and description when optional email shows */}
+            {showOptionalEmail? (<div className="mb-6 md:mb-0 md:w-1/2 relative z-[1]">
+              <h2 className="text-3xl md:text-4xl font-semibold mb-10">You’re just one step away!</h2>
+              <p className="text-lg text-gray-300 md:max-w-[400px]">Enter your email to receive your free consultation and next steps</p>
+            </div>):(<div className="mb-6 md:mb-0 md:w-1/2 relative z-[1]">
               <h2 className="text-3xl md:text-4xl font-semibold mb-10">{heading}</h2>
               <p className="text-lg text-gray-300 md:max-w-[400px]">{description}</p>
-            </div>
+            </div>)}
 
-            <form onSubmit={handleSubmit} className="md:w-1/2 w-full flex flex-col gap-4 relative z-[1]">
+            <form onSubmit={handleSubmit}  className="md:w-1/2 w-full flex flex-col gap-4 relative z-[1]">
               <div>
                 <label htmlFor={nameId} className="block text-sm mb-1 text-white opacity-50">
                   Name
@@ -176,7 +180,7 @@ export default function ContactForm({
               {(showEmail || showOptionalEmail) && (
                 <div>
                   <label htmlFor="email" className="block text-sm mb-1 text-white opacity-50">
-                    Email address {showOptionalEmail && "(optional)"}
+                    Email address   
                   </label>
                   <input
                     type="email"
@@ -189,6 +193,7 @@ export default function ContactForm({
                     required={showEmail}
                   />
                 </div>
+                
               )}
 
               {error && (

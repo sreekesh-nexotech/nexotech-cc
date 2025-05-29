@@ -67,12 +67,7 @@ export default function Projects() {
                       </span>
                     </span>
                   </Link>
-                  <Link
-                      href="#project-section"
-                      className="btn bg-white text-gray-800 shadow hover:bg-gray-50 w-full sm:w-auto sm:ml-4 z-10 relative"
-                    >
-                      Explore Our Work
-                    </Link>
+                  
                   
                 </div>
               </div>
@@ -115,7 +110,7 @@ export default function Projects() {
         ]}
         cost="₹10k"
         duration="7 Days"
-        technology="React JS"
+        technology="ReactJS"
       />
 
       <ProjectContent
