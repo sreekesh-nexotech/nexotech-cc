@@ -48,7 +48,7 @@ export default function NewLandingPage() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                From concept to execution, Nexotech sturns bold ideas into powerful, scalable digital products.
+                From concept to execution, Nexotech turns bold ideas into powerful, scalable digital products.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
