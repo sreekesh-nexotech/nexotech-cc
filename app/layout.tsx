@@ -39,10 +39,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
+  
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Google Analytics Script */}
+        {/* Google Analytics Script
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-18VZ2CX5BE" />
         <Script
           id="google-analytics"
@@ -57,7 +60,23 @@ export default function RootLayout({
               });
             `,
           }}
+        /> */}
+
+        {/* Google Tag Manager Script */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-5SW6DSPJ');
+            `,
+          }}
         />
+        
 
         {/* Meta Pixel (Facebook Pixel) */}
         <Script async src={`https://connect.facebook.net/en_US/fbevents.js`} />
@@ -83,10 +102,21 @@ export default function RootLayout({
           <img height="1" width="1" style={{ display: "none" }} 
             src={`https://www.facebook.com/tr?id=956458133300901&ev=PageView&noscript=1`} />
         </noscript>
+
+        
       </head>
       <body
         className={`${inter.variable} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased`}
       >
+        {/* Google Tag Manager Noscript Fallback */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5SW6DSPJ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          /></noscript>
+          
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}
         </div>

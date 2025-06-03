@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://nexotech.cc/reset-password</loc><lastmod>2025-03-16T17:45:33.181Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://nexotech.cc/signup</loc><lastmod>2025-03-16T17:45:33.182Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://nexotech.cc</loc><lastmod>2025-03-16T17:45:33.182Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://nexotech.cc/signin</loc><lastmod>2025-03-16T17:45:33.182Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://nexotech.cc/form</loc><lastmod>2025-03-16T17:45:33.182Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/dashboard</loc><lastmod>2025-06-03T11:57:33.394Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/learning</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/reset-password</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/form</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/signup</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/terms-and-conditions</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/new-landing</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/shipping-and-delivery</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/privacy-policy</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/contact-us</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/about</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/refund-and-cancellation</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/projects</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nexotech.cc/signin</loc><lastmod>2025-06-03T11:57:33.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
