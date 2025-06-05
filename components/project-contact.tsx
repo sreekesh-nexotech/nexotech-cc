@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from 'next/navigation';
 
 type ContactFormProps = {
   heading: string;
@@ -28,7 +29,7 @@ export default function ContactForm({
     message: "",
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const router = useRouter();
   const [showOptionalEmail, setShowOptionalEmail] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -72,7 +73,10 @@ export default function ContactForm({
         );
       }
 
-      setIsSubmitted(true);
+      // Redirect to success page
+      console.log('Redirecting to /success');
+      router.push('/success');
+      
     } catch (err) {
       console.error("Submission failed:", err);
       setError(
@@ -85,28 +89,8 @@ export default function ContactForm({
     }
   };
 
-  const handleReset = () => {
-    setFormData({ name: "", phone: "", email: "", message: "" });
-    setIsSubmitted(false);
-    setShowOptionalEmail(false);
-    setError("");
-  };
 
-  const SuccessMessage = () => (
-    <div className="text-center text-[#E5E7EB] py-16 animate-fadeIn relative z-[1]">
-      <h2 className="text-3xl md:text-4xl font-semibold mb-4">Thank You!</h2>
-      <p className="text-lg text-gray-300 mb-6">
-        Our team will contact you shortly to schedule your free demo. We appreciate your interest — thank you for choosing Nexotech.
-      </p>
-      <button
-        onClick={handleReset}
-        className="btn group bg-gradient-to-t from-blue-600 to-blue-500 text-white shadow hover:bg-[length:100%_150%] px-6 py-2 rounded-md"
-        disabled={isLoading}
-      >
-        {isLoading ? "Processing..." : "Submit Another Response"}
-      </button>
-    </div>
-  );
+ 
 
   return (
     <section>
@@ -126,9 +110,7 @@ export default function ContactForm({
           </div>
         )}
 
-        {isSubmitted ? (
-          <SuccessMessage />
-        ) : (
+
           <>
             {/* show custom heading and description when optional email shows */}
             {showOptionalEmail? (<div className="mb-6 md:mb-0 md:w-1/2 relative z-[1]">
@@ -223,7 +205,7 @@ export default function ContactForm({
               </button>
             </form>
           </>
-        )}
+        
       </div>
     </section>
   );
