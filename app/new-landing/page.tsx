@@ -40,7 +40,7 @@ export default function NewLandingPage() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              Building Digital Success Stories One Project at a Time
+              Custom Web & App Development That Fits Your Unique Needs
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
