@@ -1,6 +1,6 @@
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
-import Avatar01 from "@/public/images/Sreekesh.png";
+import Avatar01 from "@/public/images/Sreekesh.jpg";
 import Avatar02 from "@/public/images/Neeraja.png";
 import Avatar03 from "@/public/images/Anil.png";
 import Avatar04 from "@/public/images/Ashish.png";
