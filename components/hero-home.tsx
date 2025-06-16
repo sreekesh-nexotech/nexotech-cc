@@ -1,11 +1,11 @@
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
-import Avatar01 from "@/public/images/avatar-01.jpg";
-import Avatar02 from "@/public/images/avatar-02.jpg";
-import Avatar03 from "@/public/images/avatar-03.jpg";
-import Avatar04 from "@/public/images/avatar-04.jpg";
-import Avatar05 from "@/public/images/avatar-05.jpg";
-import Avatar06 from "@/public/images/avatar-06.jpg";
+import Avatar01 from "@/public/images/Sreekesh.png";
+import Avatar02 from "@/public/images/Neeraja.png";
+import Avatar03 from "@/public/images/Anil.png";
+import Avatar04 from "@/public/images/Ashish.png";
+import Avatar05 from "@/public/images/Sreyes.png";
+import Avatar06 from "@/public/images/Ashwin.png";
 import Link from "next/link";
 
 export default function HeroHome() {
