@@ -22,6 +22,9 @@ export default function Footer({ border = false }: { border?: boolean }) {
               &copy; Nexotech.cc - All rights reserved.
             </div>
             <div className="text-sm text-gray-600">
+              Nexotech Solutions - GSTIN: 32AAXFN3096L1ZK
+            </div>
+            <div className="text-sm text-gray-600">
               49/190B, Tharath building, Kalappura PO, Arattuvazhy ward,
               Alappuzha - 688007
             </div>
