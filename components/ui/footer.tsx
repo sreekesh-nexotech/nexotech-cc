@@ -81,6 +81,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 <Link
                   href="/terms-and-conditions"
                   className="text-gray-600 hover:text-blue-600 transition duration-200"
+                  target="new"
                 >
                   Terms and Conditions
                 </Link>
@@ -89,6 +90,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 <Link
                   href="/privacy-policy"
                   className="text-gray-600 hover:text-blue-600 transition duration-200"
+                  target="new"
                 >
                   Privacy Policy
                 </Link>
@@ -97,6 +99,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 <Link
                   href="/refund-and-cancellation"
                   className="text-gray-600 hover:text-blue-600 transition duration-200"
+                  target="new"
                 >
                   Refund and Cancellation Policy
                 </Link>
@@ -105,8 +108,18 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 <Link
                   href="/shipping-and-delivery"
                   className="text-gray-600 hover:text-blue-600 transition duration-200"
+                  target="new"
                 >
                   Shipping and Delivery Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/data-deletion"
+                  className="text-gray-600 hover:text-blue-600 transition duration-200"
+                  target="new"
+                >
+                  Data Deletion Request
                 </Link>
               </li>
             </ul>
