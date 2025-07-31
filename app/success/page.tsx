@@ -11,7 +11,7 @@ export default function FormSuccessMessage() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push('/'); // Redirect to form page
+      router.push('/new-landing'); // Redirect to form page
     }, 5000); // 5 seconds
 
     return () => clearTimeout(timer); // Cleanup timer
