@@ -1,6 +1,40 @@
-"use client";
+
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+
+
+// Define page-specific metadata
+export const metadata = {
+  title: "Terms And Conditions | Nexotech",
+  description:
+    "These Terms and Conditions govern your access to and use of our services, including our websites, applications, and any related offerings.",
+  keywords: ["Terms And Conditions", "terms", "Nexotech"],
+  openGraph: {
+    title: "Terms And Conditions  | Nexotech",
+    description: "These Terms and Conditions govern your access to and use of our services, including our websites, applications, and any related offerings.",
+    url: "https://www.nexotech.cc/terms-and-conditions",
+    siteName: "Nexotech",
+    images: [
+      {
+        url: "https://nexotech.cc/images/logo-01.svg",
+        width: 1200,
+        height: 630,
+        alt: "Nexotech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@nexotech",
+    creator: "@nexotech",
+    title: "Terms And Conditions | Nexotech",
+    description: "These Terms and Conditions govern your access to and use of our services, including our websites, applications, and any related offerings.",
+    images: ["https://nexotech.cc/images/logo-01.svg"],
+  },
+};
+
+
 
 export default function TermsAndConditions() {
   return (
@@ -200,12 +234,11 @@ export default function TermsAndConditions() {
               10. Limitation of Liability
             </h2>
             <p className="mt-2 text-gray-600">
-              To the maximum extent permitted by law:
+              Nexotech is not liable for: 
             </p>
             <ul className="mt-2 text-gray-600 list-disc pl-5">
               <li>
-                Nexotech Solutions shall not be liable for any indirect,
-                incidental, consequential, or punitive damages arising from the
+                Indirect, incidental, consequential, or punitive damages arising from the
                 use or inability to use our Services
               </li>
               <li>
@@ -213,6 +246,9 @@ export default function TermsAndConditions() {
                 paid by the user for the Services during the six (6) months
                 preceding the event giving rise to the liability
               </li>
+              <li>Rejected messages by WhatsApp due to policy violations</li>
+              <li>Penalties arising from spam complaints or consent-related issues</li>
+              <li>Data loss due to improper configuration or user error in CRM or WhatsApp  integrations</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
@@ -227,7 +263,45 @@ export default function TermsAndConditions() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              12. Governing Law and Jurisdiction
+              12. WhatsApp API Usage
+            </h2>
+            <ul className="mt-2 text-gray-600 list-disc pl-5">
+              <li>
+                You must use the WhatsApp Business API only for lawful, customer-approved communication. 
+              </li>
+              <li>
+               You are solely responsible for obtaining consent from message recipients. 
+              </li>
+              <li>Nexotech reserves the right to suspend or revoke access if abuse, spam complaints, or policy violations are detected. </li>
+              <li>Broadcast messages must comply with Metaʼs Commerce and Business Messaging Policies. </li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-8">
+              13. CRM Services
+            </h2>
+            <ul className="mt-2 text-gray-600 list-disc pl-5">
+              <li>
+                CRM services are provided on a subscription basis and may include modules like customer tracking, deal pipelines, ticketing, and communication logs. 
+              </li>
+              <li>
+               Users are responsible for the accuracy and legality of any customer data they upload or manage through the CRM. 
+              </li>
+              <li>Flarize may temporarily restrict access or modify features for maintenance or upgrades with reasonable notice. </li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-8">
+              14. Service Restrictions
+            </h2>
+            <ul className="mt-2 text-gray-600 list-disc pl-5">
+              <li>
+                Bulk messaging or unsolicited promotional campaigns without opt-in may result in account suspension.  
+              </li>
+              <li>
+               Automated bots or sequences must follow WhatsAppʼs rules regarding user-initiated conversation windows.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-8">
+              15. Governing Law and Jurisdiction
             </h2>
             <p className="mt-2 text-gray-600">
               These Terms shall be governed and construed in accordance with the
@@ -237,7 +311,7 @@ export default function TermsAndConditions() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              13. Dispute Resolution
+              16. Dispute Resolution
             </h2>
             <p className="mt-2 text-gray-600">
               Before resorting to court proceedings, the parties agree to
@@ -246,7 +320,7 @@ export default function TermsAndConditions() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              14. Amendments
+              17. Amendments
             </h2>
             <p className="mt-2 text-gray-600">
               We may amend these Terms at any time by posting the updated
@@ -256,7 +330,7 @@ export default function TermsAndConditions() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              15. Contact Information
+              18. Contact Information
             </h2>
             <p className="mt-2 text-gray-600">
               For any questions, concerns, or complaints regarding these Terms,

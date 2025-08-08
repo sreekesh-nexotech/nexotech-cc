@@ -1,6 +1,38 @@
-"use client";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+
+
+// Define page-specific metadata
+export const metadata = {
+  title: "Privacy Policy | Nexotech",
+  description:
+    "At Nexotech Solutions , your privacy is of utmost importance to us.",
+  keywords: ["privacy policy", "privacy", "Nexotech"],
+  openGraph: {
+    title: "Privacy Policy  | Nexotech",
+    description: "At Nexotech Solutions , your privacy is of utmost importance to us.",
+    url: "https://www.nexotech.cc/privacy-policy",
+    siteName: "Nexotech",
+    images: [
+      {
+        url: "https://nexotech.cc/images/logo-01.svg",
+        width: 1200,
+        height: 630,
+        alt: "Nexotech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@nexotech",
+    creator: "@nexotech",
+    title: "Privacy Policy | Nexotech",
+    description: "At Nexotech Solutions , your privacy is of utmost importance to us.",
+    images: ["https://nexotech.cc/images/logo-01.svg"],
+  },
+};
+
 
 export default function PrivacyPolicy() {
   return (
@@ -83,6 +115,16 @@ export default function PrivacyPolicy() {
               Payment transaction information via <strong>Razorpay</strong>{" "}
               (only transaction success/failure, not sensitive card details)
             </p>
+            <h3 className="text-xl font-semibold text-gray-800 mt-4">
+              d) In connection with our WhatsApp API and CRM services, we may collect:
+            </h3>
+            <ul className="mt-1 text-gray-600 list-disc pl-5 space-y-1">
+              <li>Business WhatsApp numbers and sender IDs </li>
+              <li>Customer contact lists uploaded by users (e.g., phone numbers, names, tags)</li>
+              <li>Conversation metadata (timestamps, delivery status, etc.) </li>
+              <li>CRM-specific data like deal status, activity logs, support tickets, or sales funnel data </li>
+              <li>Templates and broadcast message content (only if stored for history or analysis) </li>
+            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
               3. How We Use Your Information
@@ -104,32 +146,49 @@ export default function PrivacyPolicy() {
               <li>To provide customer support</li>
               <li>To improve our Services, features, and user experience</li>
               <li>To ensure compliance with applicable legal obligations</li>
+              <li>To facilitate message delivery and automation via WhatsApp Business API </li>
+              <li>To enable campaign segmentation, targeting, and analytics within the CRM </li>
+              <li>To provide customer support, ticketing, and sales tracking tools </li>
+              <li>To ensure compliance with WhatsApp's Business Policy and Metaʼs terms </li>
+              <li>To improve performance, usability, and personalization of CRM dashboards</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              4. Sharing of Information
+              4.  Data Sharing
             </h2>
             <p className="mt-2 text-gray-600">
-              We do <strong>not</strong> sell or rent your personal information
-              to third parties. We may share your information with:
+              We do  <strong>not</strong> sell or rent your personal information to third parties. We may share your information with:
             </p>
             <ul className="mt-2 text-gray-600 list-disc pl-5 space-y-1">
               <li>
-                <strong>Service providers</strong> (e.g., Razorpay for payment
+                With <strong>Service providers</strong> (e.g., Razorpay for payment
                 processing)
               </li>
               <li>
-                <strong>Legal authorities</strong> if required by law
+                With <strong>Legal authorities</strong> if required by law
               </li>
               <li>
-                <strong>Business partners</strong> in case of mergers,
+                With <strong>Business partners</strong> in case of mergers,
                 acquisitions, or sale of assets (with prior notice)
               </li>
+              <li>With <strong>Meta Platforms, Inc.</strong> as required by WhatsApp Business API delivery</li>
+              <li>With <strong>Our backend message providers</strong> (e.g., 360dialog, Gupshup) </li>
+              <li>With <strong>analytics or hosting services</strong> under strict confidentiality and data security obligations </li>
+            </ul>
+            <br/>
+             <p className="mt-2 text-gray-600">
+              We do  <strong>not</strong> share your contact lists or CRM data with third parties, except: 
+            </p>
+            <ul className="mt-2 text-gray-600 list-disc pl-5 space-y-1">
+              <li>With <strong>Meta Platforms, Inc.</strong> as required by WhatsApp Business API delivery</li>
+              <li>With <strong>Our backend message providers</strong> (e.g., 360dialog, Gupshup) </li>
+              <li>With <strong>analytics or hosting services</strong> under strict confidentiality and data security obligations </li>
             </ul>
             <p className="mt-2 text-gray-600">
               All third-party partners are required to maintain confidentiality
               and security standards at least equivalent to ours.
             </p>
+
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
               5. Data Retention
@@ -240,7 +299,14 @@ export default function PrivacyPolicy() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              11. Changes to This Privacy Policy
+              11. User Consent & Legal Basis 
+            </h2>
+            <p className="mt-2 text-gray-600">
+              By uploading customer data or initiating WhatsApp campaigns, you confirm that you have received proper consent from your contacts, and that your use complies with applicable data protection laws (such as Indiaʼs DPDP Act or WhatsAppʼs policies). 
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-8">
+              12. Changes to This Privacy Policy
             </h2>
             <p className="mt-2 text-gray-600">
               We reserve the right to update this Privacy Policy at any time.
@@ -252,7 +318,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              12. Governing Law
+              13. Governing Law
             </h2>
             <p className="mt-2 text-gray-600">
               This Privacy Policy shall be governed by and construed in
@@ -264,7 +330,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8">
-              13. Contact Us
+              14. Contact Us
             </h2>
             <p className="mt-2 text-gray-600">
               If you have any questions, concerns, or complaints about this
