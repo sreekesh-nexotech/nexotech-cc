@@ -1,6 +1,26 @@
-"use client";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import { Metadata } from "next";
+
+
+// Define page-specific metadata
+
+export const metadata: Metadata = {
+  title: 'Refund and Cancellation | Nexotech',
+  description: 'Need to cancel an order or request a refund? Find all the information you need on our refund and cancellation policy page.',
+  
+  // IMPORTANT: Override the robots tag for this page
+  robots: {
+    index: false, 
+    follow: true,   
+  },
+  
+  // The canonical URL for this specific page
+  alternates: {
+    canonical: 'https://nexotech.cc/refund-and-cancellation',
+  },
+};
+
 
 export default function RefundAndCancellationPolicy() {
   return (

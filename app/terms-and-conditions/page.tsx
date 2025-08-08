@@ -1,38 +1,27 @@
 
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import { Metadata } from "next";
 
 
 // Define page-specific metadata
-export const metadata = {
-  title: "Terms And Conditions | Nexotech",
-  description:
-    "These Terms and Conditions govern your access to and use of our services, including our websites, applications, and any related offerings.",
-  keywords: ["Terms And Conditions", "terms", "Nexotech"],
-  openGraph: {
-    title: "Terms And Conditions  | Nexotech",
-    description: "These Terms and Conditions govern your access to and use of our services, including our websites, applications, and any related offerings.",
-    url: "https://www.nexotech.cc/terms-and-conditions",
-    siteName: "Nexotech",
-    images: [
-      {
-        url: "https://nexotech.cc/images/logo-01.svg",
-        width: 1200,
-        height: 630,
-        alt: "Nexotech Logo",
-      },
-    ],
-    type: "website",
+
+export const metadata: Metadata = {
+  title: 'Terms And Conditions | Nexotech',
+  description: 'Understand your rights and responsibilities when using our services. This page details the rules and regulations for using our website and services.',
+  
+  // IMPORTANT: Override the robots tag for this page
+  robots: {
+    index: false, 
+    follow: true,   
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@nexotech",
-    creator: "@nexotech",
-    title: "Terms And Conditions | Nexotech",
-    description: "These Terms and Conditions govern your access to and use of our services, including our websites, applications, and any related offerings.",
-    images: ["https://nexotech.cc/images/logo-01.svg"],
+  
+  // The canonical URL for this specific page
+  alternates: {
+    canonical: 'https://nexotech.cc/terms-and-conditions',
   },
 };
+
 
 
 

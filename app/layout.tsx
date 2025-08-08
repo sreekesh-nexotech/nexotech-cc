@@ -10,30 +10,67 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nexotech|Custom Software and IT Consulting",
-  description: "Nexotech Solutions empowers businesses with custom software, IT consulting, web and app development, chatbot development, and automation. Scale faster with innovative digital solutions!",
+  // --- CORE METADATA ---
+  metadataBase: new URL('https://nexotech.cc'), 
+  title: "Nexotech: Custom Software Development & IT Consulting",
+  description: "Nexotech Solutions empowers businesses with custom software, IT consulting, web/app development, and automation. Partner with us to innovate and scale faster.",
+  keywords: ["custom software development", "it consulting", "web development", "mobile app development", "automation solutions", "chatbot development", "nexotech solutions"],
+
+  // --- ROBOTS & CANONICAL ---
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://nexotech.cc',
+  },
+
+  // --- ICONS ---
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/images/apple-icon.png',
+    apple: '/apple-icon.png',
+  },
+  
+  // --- OPEN GRAPH (OG) METADATA FOR SOCIAL SHARING ---
   openGraph: {
-    title: "Nexotech|Custom Software and IT Consulting",
-    description: "Nexotech Solutions empowers businesses with custom software, IT consulting, web and app development, chatbot development, and automation. Scale faster with innovative digital solutions!",
+    title: "Nexotech | Drive Growth with Innovative Digital Solutions", // A more engaging title for social media
+    description: "From custom software and IT consulting to AI chatbots and automation, Nexotech builds the tools your business needs to succeed.", // A punchier description
     url: "https://nexotech.cc",
     siteName: "Nexotech",
     images: [
       {
-        url: "https://nexotech.cc/images/logo-01.svg",
+        url: 'https://nexotech.cc/images/ogImg.jpg', 
         width: 1200,
         height: 630,
-        alt: "Nexotech Logo",
+        alt: 'Nexotech Solutions - Custom Software and IT Consulting',
+        type: "image/jpeg",
       },
     ],
-    type: "website",
+    locale: 'en_US', 
+    type: 'website',
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@nexotech",
-    creator: "@nexotech",
-  },
-};
 
+  // --- TWITTER-SPECIFIC METADATA ---
+  twitter: {
+    card: 'summary_large_image',
+    title: "Nexotech: Custom Software Development & IT Consulting",
+    description: "Nexotech Solutions empowers businesses with custom software, IT consulting, web/app development, and automation.",
+    site: '@nexotech', 
+    creator: '@nexotech', 
+    images: ['https://nexotech.cc/images/ogImg.jpg'], 
+  },
+
+  // --- MISC ---
+  manifest: '/site.webmanifest', // For PWA capabilities
+};
 export default function RootLayout({
   children,
 }: {

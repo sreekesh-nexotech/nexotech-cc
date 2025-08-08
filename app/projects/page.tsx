@@ -13,6 +13,28 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import ProjectContact from "@/components/project-contact";
 import Testimonial from "@/components/testimonial";
+import { Metadata } from "next";
+
+
+// Define page-specific metadata
+
+// export const metadata: Metadata = {
+//   title: 'Our Projects | Nexotech',
+//   description: 'Discover the latest project from Nexotech. Learn about our process, the challenges we overcame, and the results we delivered.',
+  
+//   // IMPORTANT: Override the robots tag for this page
+//   robots: {
+//     index: false, 
+//     follow: true,   
+//   },
+  
+//   // The canonical URL for this specific page
+//   alternates: {
+//     canonical: 'https://nexotech.cc/projects',
+//   },
+// };
+
+
 
 
 export default function Projects() {

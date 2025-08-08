@@ -1,37 +1,26 @@
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import { Metadata } from "next";
 
 
 // Define page-specific metadata
-export const metadata = {
-  title: "Privacy Policy | Nexotech",
-  description:
-    "At Nexotech Solutions , your privacy is of utmost importance to us.",
-  keywords: ["privacy policy", "privacy", "Nexotech"],
-  openGraph: {
-    title: "Privacy Policy  | Nexotech",
-    description: "At Nexotech Solutions , your privacy is of utmost importance to us.",
-    url: "https://www.nexotech.cc/privacy-policy",
-    siteName: "Nexotech",
-    images: [
-      {
-        url: "https://nexotech.cc/images/logo-01.svg",
-        width: 1200,
-        height: 630,
-        alt: "Nexotech Logo",
-      },
-    ],
-    type: "website",
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Nexotech',
+  description: 'Learn how Nexotech Solutions collects, uses, and protects your personal information when you use our services.',
+  
+  // IMPORTANT: Override the robots tag for this page
+  robots: {
+    index: false, 
+    follow: true,  
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@nexotech",
-    creator: "@nexotech",
-    title: "Privacy Policy | Nexotech",
-    description: "At Nexotech Solutions , your privacy is of utmost importance to us.",
-    images: ["https://nexotech.cc/images/logo-01.svg"],
+  
+  // The canonical URL for this specific page
+  alternates: {
+    canonical: 'https://nexotech.cc/privacy-policy',
   },
 };
+
 
 
 export default function PrivacyPolicy() {

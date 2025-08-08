@@ -6,35 +6,22 @@ import { Metadata } from "next";
 import DataDeletionForm from "@/components/data-deletion-form";
 
 // Define page-specific metadata
-export const metadata = {
-  title: "Data Deletion Request | Nexotech",
-  description:
-    "Request the deletion of your personal data from Nexotech. Learn how to submit a deletion request and understand what happens to your account.",
-  keywords: ["data deletion", "privacy", "account deletion", "Nexotech"],
-  openGraph: {
-    title: "Data Deletion Request | Nexotech",
-    description: "Request the deletion of your personal data from Nexotech.",
-    url: "https://www.nexotech.cc/data-deletion",
-    siteName: "Nexotech",
-    images: [
-      {
-        url: "https://nexotech.cc/images/logo-01.svg",
-        width: 1200,
-        height: 630,
-        alt: "Nexotech Logo",
-      },
-    ],
-    type: "website",
+export const metadata: Metadata = {
+  title: 'Data Deletion | Nexotech',
+  description: 'Have questions about data privacy? Our data deletion policy explains how you can request to have your personal information permanently removed.',
+  
+  // IMPORTANT: Override the robots tag for this page
+  robots: {
+    index: false, 
+    follow: true,   
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@nexotech",
-    creator: "@nexotech",
-    title: "Data Deletion Request | Nexotech",
-    description: "Request the deletion of your personal data from Nexotech.",
-    images: ["https://nexotech.cc/images/logo-01.svg"],
+  
+  // The canonical URL for this specific page
+  alternates: {
+    canonical: 'https://nexotech.cc/data-deletion',
   },
 };
+
 
 export default function DataDeletion() {
   return (

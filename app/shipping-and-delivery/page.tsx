@@ -1,6 +1,25 @@
-"use client";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import { Metadata } from "next";
+
+
+// Define page-specific metadata
+
+export const metadata: Metadata = {
+  title: 'Shipping and Delivery | Nexotech',
+  description: 'Get clear information on our shipping and delivery process. We provide fast, reliable shipping with options to track your order every step of the way.',
+  
+  // IMPORTANT: Override the robots tag for this page
+  robots: {
+    index: false, 
+    follow: true,   
+  },
+  
+  // The canonical URL for this specific page
+  alternates: {
+    canonical: 'https://nexotech.cc/shipping-and-delivery',
+  },
+};
 
 export default function ShippingAndDeliveryPolicy() {
   return (
