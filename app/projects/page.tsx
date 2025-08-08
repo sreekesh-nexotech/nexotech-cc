@@ -115,7 +115,6 @@ export default function Projects() {
           '/images/goldenRayMock-(3).png',
           '/images/goldenRayMock-(4).png',
         ]}
-        cost="₹80k"
         duration="in-progress"
         technology="ReactJS, Django, NextJS"
         isWebsiteLink={false}
@@ -130,7 +129,6 @@ export default function Projects() {
           '/images/autogenMock-(3).png',
           '/images/autogenMock-(1).png',
         ]}
-        cost="₹10k"
         duration="7 Days"
         technology="ReactJS"
       />
@@ -144,7 +142,6 @@ export default function Projects() {
           '/images/biraptMockup-(3).png',
           '/images/biraptMockup-(4).png',
         ]}
-        cost="₹10k"
         duration="5 Days"
         technology="HTML, CSS, JS, Flask"
       />
@@ -160,7 +157,6 @@ export default function Projects() {
           '/images/NexoGMS_mockup_02.png',
           '/images/NexoGMS_mockup_04.png',
         ]}
-        cost="₹120k"
         duration="60 Days"
         technology="ReactJS, Django, Postgre SQL"
       />
@@ -174,7 +170,6 @@ export default function Projects() {
           '/images/NexoGMS_Mobile-04.png',
           '/images/NexoGMS_Mobile-01.png',
         ]}
-        cost="₹60k"
         duration="60 Days"
         technology="Flutter"
         isWebsiteLink={false}
