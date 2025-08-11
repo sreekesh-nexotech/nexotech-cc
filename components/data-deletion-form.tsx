@@ -1,39 +1,39 @@
 /* nexotech-cc/components/data-deletion-form.tsx */
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react"; // Import useEffect
+import { useState, useEffect } from "react";
 
 type DataDeletionFormProps = {
   heading: string;
   description: string;
-  nameId: string;
+  mobileId: string;
   emailId: string;
 };
 
 export default function DataDeletionForm({
   heading,
   description,
-  nameId,
+  mobileId,
   emailId,
 }: DataDeletionFormProps) {
   const [formData, setFormData] = useState({
-    name: "",
+    mobile: "",
     email: "",
   });
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false); // State for success message
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  // useEffect to clear success message after 3 seconds
+  // Clear success message after 3 seconds
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isSuccess) {
       timer = setTimeout(() => {
         setIsSuccess(false);
-      }, 3000); // 3000 milliseconds = 3 seconds
+      }, 3000);
     }
-    return () => clearTimeout(timer); // Clean up the timer
+    return () => clearTimeout(timer);
   }, [isSuccess]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,17 +44,27 @@ export default function DataDeletionForm({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
-    setIsSuccess(false); // Reset success state on new submission
+    setIsSuccess(false);
 
-    // Simulate loading for a few seconds
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/;
+
+    // Validate: at least one field must be valid
+    const isEmailValid = emailRegex.test(formData.email);
+    const isPhoneValid = phoneRegex.test(formData.mobile);
+
+    if (!isEmailValid && !isPhoneValid) {
+      setError("Please enter a valid email address or a 10-digit mobile number.");
+      return;
+    }
+
     setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate network delay
+    await new Promise((resolve) => setTimeout(resolve, 2000)); // simulate network delay
 
     try {
-      // Simulate a successful submission
       console.log("Simulating data deletion request with:", formData);
-      setIsSuccess(true); // Set success state
-      setFormData({ name: "", email: "" }); // Clear form data on success
+      setIsSuccess(true);
+      setFormData({ mobile: "", email: "" });
     } catch (err) {
       console.error("Simulated submission failed:", err);
       setError("Failed to process request. Please try again.");
@@ -105,32 +115,35 @@ export default function DataDeletionForm({
             >
               <div>
                 <label
-                  htmlFor={nameId}
+                  htmlFor={mobileId}
                   className="block text-sm mb-1 text-white opacity-50"
                 >
-                  Name
+                  Mobile Number
                 </label>
                 <input
-                  type="text"
-                  id={nameId}
-                  name="name"
-                  value={formData.name}
+                  type="tel"
+                  id={mobileId}
+                  name="mobile"
+                  value={formData.mobile}
                   onChange={handleInputChange}
-                  placeholder="Your Name"
+                  placeholder="9876543210"
                   className="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400"
-                  required
-                  minLength={3}
-                  pattern="[A-Za-z\s]{3,}"
-                  title="Please enter at least 3 alphabetic characters"
+                  pattern="[0-9]{10}"
+                  title="Please enter a valid 10-digit mobile number"
                 />
               </div>
+
+              <p className="text-xs text-gray-400 italic">
+                Or
+              </p>
+
 
               <div>
                 <label
                   htmlFor={emailId}
                   className="block text-sm mb-1 text-white opacity-50"
                 >
-                  Email address
+                  Email Address
                 </label>
                 <input
                   type="email"
@@ -140,7 +153,6 @@ export default function DataDeletionForm({
                   onChange={handleInputChange}
                   placeholder="you@example.com"
                   className="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400"
-                  required
                 />
               </div>
 
@@ -150,6 +162,7 @@ export default function DataDeletionForm({
                 </div>
               )}
 
+              
               <button
                 type="submit"
                 className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto flex justify-center items-center gap-2 mt-4"

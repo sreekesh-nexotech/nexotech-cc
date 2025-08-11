@@ -102,7 +102,12 @@ locate and delete all related records securely. <br/>After submitting:
             <ul className="mt-2 text-gray-600 list-disc pl-5 space-y-1">
               <li>
                 If you submitted a request by accident or need support, contact
-                us at [support@yourcompany.com].
+                us at <a
+                href="mailto:office@nexotech.cc"
+                className="text-blue-600 hover:underline"
+              >
+                office@nexotech.cc
+              </a>
               </li>
             </ul>
 
@@ -123,12 +128,12 @@ locate and delete all related records securely. <br/>After submitting:
             </ul>
           </div>
 
-          {/* Data Deletion Form - Placed AFTER the prose content */}
+          {/* Data Deletion Form */}
           <div className="mt-16 mb-20"> 
             <DataDeletionForm
               heading="Submit a Deletion Request"
-              description="Please provide the email address associated with your account. We will process your request within 7 business days."
-              nameId="deletion-name"
+              description="Please provide the email address or Mobile Number associated with your account. We will process your request within 7 business days."
+              mobileId="deletion-mobile"
               emailId="deletion-email"
             />
           </div>
