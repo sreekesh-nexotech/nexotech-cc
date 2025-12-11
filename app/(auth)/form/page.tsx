@@ -2,16 +2,27 @@
 
 import { useState } from "react";
 
+interface FieldError {
+  field: string;
+  message: string;
+}
+
 export default function LeadCollection() {
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldError[]>([]);
+  const [generalError, setGeneralError] = useState("");
+
+  const getFieldError = (fieldName: string): string | undefined => {
+    return fieldErrors.find((err) => err.field === fieldName)?.message;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setSuccessMessage("");
-    setErrorMessage("");
+    setFieldErrors([]);
+    setGeneralError("");
 
     const form = e.currentTarget; // Store the form reference
     const formData = new FormData(form);
@@ -21,19 +32,33 @@ export default function LeadCollection() {
       const response = await fetch("/api/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(data),
       });
 
+      const responseData = await response.json();
+
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Something went wrong");
+        if (responseData.errors && Array.isArray(responseData.errors)) {
+          setFieldErrors(responseData.errors);
+          setGeneralError("Please fix the errors below.");
+        } else {
+          setGeneralError(responseData.message || "Something went wrong");
+        }
+        setLoading(false);
+        return;
       }
 
       setSuccessMessage("Thank you! Your details have been submitted.");
       form.reset(); // Use the stored reference
+      setFieldErrors([]);
     } catch (error) {
       console.error(error);
-      setErrorMessage(error instanceof Error ? error.message : "An error occurred while submitting your details.");
+      setGeneralError(
+        error instanceof Error
+          ? error.message
+          : "An error occurred while submitting your details."
+      );
     } finally {
       setLoading(false);
     }
@@ -45,8 +70,16 @@ export default function LeadCollection() {
         <h1 className="text-4xl font-bold">Submit Your Details</h1>
       </div>
 
-      {successMessage && <p className="mb-4 text-green-600">{successMessage}</p>}
-      {errorMessage && <p className="mb-4 text-red-600">{errorMessage}</p>}
+      {successMessage && (
+        <p className="mb-4 p-4 bg-green-100 text-green-700 rounded">
+          {successMessage}
+        </p>
+      )}
+      {generalError && (
+        <p className="mb-4 p-4 bg-red-100 text-red-700 rounded">
+          {generalError}
+        </p>
+      )}
 
       {/* Form */}
       <form onSubmit={handleSubmit}>
@@ -61,11 +94,18 @@ export default function LeadCollection() {
             <input
               name="name"
               id="name"
-              className="form-input w-full py-2"
+              className={`form-input w-full py-2 ${
+                getFieldError("name") ? "border-red-500" : ""
+              }`}
               type="text"
               placeholder="John Doe"
               required
             />
+            {getFieldError("name") && (
+              <p className="mt-1 text-sm text-red-600">
+                {getFieldError("name")}
+              </p>
+            )}
           </div>
           <div>
             <label
@@ -77,11 +117,18 @@ export default function LeadCollection() {
             <input
               name="phone"
               id="phone"
-              className="form-input w-full py-2"
+              className={`form-input w-full py-2 ${
+                getFieldError("phone") ? "border-red-500" : ""
+              }`}
               type="text"
               placeholder="(+750) 932-8907"
               required
             />
+            {getFieldError("phone") && (
+              <p className="mt-1 text-sm text-red-600">
+                {getFieldError("phone")}
+              </p>
+            )}
           </div>
           <div>
             <label
@@ -93,11 +140,18 @@ export default function LeadCollection() {
             <input
               name="email"
               id="email"
-              className="form-input w-full py-2"
+              className={`form-input w-full py-2 ${
+                getFieldError("email") ? "border-red-500" : ""
+              }`}
               type="email"
               placeholder="johndoe@email.com"
               required
             />
+            {getFieldError("email") && (
+              <p className="mt-1 text-sm text-red-600">
+                {getFieldError("email")}
+              </p>
+            )}
           </div>
           <div>
             <label
@@ -109,10 +163,17 @@ export default function LeadCollection() {
             <input
               name="company"
               id="company"
-              className="form-input w-full py-2"
+              className={`form-input w-full py-2 ${
+                getFieldError("company") ? "border-red-500" : ""
+              }`}
               type="text"
               placeholder="ABC Corp"
             />
+            {getFieldError("company") && (
+              <p className="mt-1 text-sm text-red-600">
+                {getFieldError("company")}
+              </p>
+            )}
           </div>
           <div>
             <label
@@ -124,10 +185,17 @@ export default function LeadCollection() {
             <textarea
               name="message"
               id="message"
-              className="form-textarea w-full py-2"
+              className={`form-textarea w-full py-2 ${
+                getFieldError("message") ? "border-red-500" : ""
+              }`}
               rows={4}
               placeholder="Enter your message..."
             ></textarea>
+            {getFieldError("message") && (
+              <p className="mt-1 text-sm text-red-600">
+                {getFieldError("message")}
+              </p>
+            )}
           </div>
         </div>
         <div className="mt-6">

@@ -13,6 +13,11 @@ type ContactFormProps = {
   apiEndpoint?: string;
 };
 
+interface FieldError {
+  field: string;
+  message: string;
+}
+
 export default function ContactForm({
   heading,
   description,
@@ -32,16 +37,24 @@ export default function ContactForm({
   const router = useRouter();
   const [showOptionalEmail, setShowOptionalEmail] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldError[]>([]);
+  const [generalError, setGeneralError] = useState("");
+
+  const getFieldError = (fieldName: string): string | undefined => {
+    return fieldErrors.find((err) => err.field === fieldName)?.message;
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // clear per-field error when user edits
+    setFieldErrors((prev) => prev.filter((err) => err.field !== name));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError("");
+    setGeneralError("");
+    setFieldErrors([]);
 
     // First step: Show email field if needed
     if (!showEmail && !showOptionalEmail) {
@@ -57,6 +70,7 @@ export default function ContactForm({
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
@@ -66,20 +80,27 @@ export default function ContactForm({
         }),
       });
 
+      const responseData = await response.json();
+
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(
-          errorData.message || `Server responded with ${response.status}`
-        );
+        if (responseData.errors && Array.isArray(responseData.errors)) {
+          setFieldErrors(responseData.errors);
+          setGeneralError("Please fix the errors below.");
+        } else {
+          setGeneralError(
+            responseData.message || `Server responded with ${response.status}`
+          );
+        }
+        setIsLoading(false);
+        return;
       }
 
       // Redirect to success page
-      console.log('Redirecting to /success');
       router.push('/success');
       
     } catch (err) {
       console.error("Submission failed:", err);
-      setError(
+      setGeneralError(
         err instanceof Error
           ? err.message
           : "Failed to submit form. Please try again."
@@ -122,6 +143,12 @@ export default function ContactForm({
             </div>)}
 
             <form onSubmit={handleSubmit}  className="md:w-1/2 w-full flex flex-col gap-4 relative z-[1]">
+              {generalError && (
+                <div className="text-red-400 text-sm py-2 px-3 bg-red-900/20 rounded-md">
+                  {generalError}
+                </div>
+              )}
+
               <div>
                 <label htmlFor={nameId} className="block text-sm mb-1 text-white opacity-50">
                   Name
@@ -133,12 +160,19 @@ export default function ContactForm({
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Your Name"
-                  className="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400"
+                  className={`w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400 ${
+                    getFieldError("name") ? "border-2 border-red-500" : ""
+                  }`}
                   required
                   minLength={3}
                   pattern="[A-Za-z\s]{3,}"
                   title="Please enter at least 3 alphabetic characters"
                 />
+                {getFieldError("name") && (
+                  <p className="mt-1 text-sm text-red-400">
+                    {getFieldError("name")}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -152,11 +186,18 @@ export default function ContactForm({
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="+91 1234-567890"
-                  className="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400"
+                  className={`w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400 ${
+                    getFieldError("phone") ? "border-2 border-red-500" : ""
+                  }`}
                   required
                   pattern="[0-9]{*}"
                   title="Please enter a valid phone number"
                 />
+                {getFieldError("phone") && (
+                  <p className="mt-1 text-sm text-red-400">
+                    {getFieldError("phone")}
+                  </p>
+                )}
               </div>
 
               {(showEmail || showOptionalEmail) && (
@@ -171,17 +212,18 @@ export default function ContactForm({
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="you@example.com"
-                    className="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400"
+                    className={`w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-400 ${
+                      getFieldError("email") ? "border-2 border-red-500" : ""
+                    }`}
                     required={showEmail}
                   />
+                  {getFieldError("email") && (
+                    <p className="mt-1 text-sm text-red-400">
+                      {getFieldError("email")}
+                    </p>
+                  )}
                 </div>
                 
-              )}
-
-              {error && (
-                <div className="text-red-400 text-sm py-2 px-3 bg-red-900/20 rounded-md">
-                  {error}
-                </div>
               )}
 
               <button
