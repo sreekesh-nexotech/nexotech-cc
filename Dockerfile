@@ -3,29 +3,36 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json first (to leverage Docker caching)
+# Copy package files
 COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci --only=production
 
-# Copy the rest of the application files
+# Copy application
 COPY . .
 
-# Build the Next.js app
+# Build
 RUN npm run build
 
-# Use a lightweight image to serve the app
+# Production image
 FROM node:18-alpine
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nextjs -u 1001
 
 WORKDIR /app
 
-# Copy the built application from the previous stage
-COPY --from=builder /app /app
+# Copy built app with correct ownership
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
-# Expose Next.js default port (3000)
+# Switch to non-root user
+USER nextjs
+
 EXPOSE 3000
 
-# Start the Next.js application
 CMD ["npm", "run", "start"]
-
